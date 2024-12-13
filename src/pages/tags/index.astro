@@ -5,6 +5,7 @@ import { getAllTagsWithCounts } from "@/lib/notion/client";
 import { getNotionColorToTailwindColor } from "@/lib/style-helpers";
 import { slugify } from "@/utils";
 
+
 const allTags = await getAllTagsWithCounts();
 
 const meta = {

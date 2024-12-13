@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/SkipLink";
 import { siteInfo } from "@/siteInfo";
+import Analytics from '@vercel/analytics/astro';
 import { ENABLE_LIGHTBOX, REFERENCES } from "@/constants";
 interface Props {
 meta: SiteMeta;
@@ -15,6 +16,7 @@ meta: { title = siteInfo.title, description = siteInfo.description, ogImage, art
 ---
 <html lang={siteInfo.lang}>
    <head>
+      <Analytics />
       <BaseHead title={title} description={description} ogImage={ogImage} articleDate={articleDate} />
    </head>
    <body class="print:max-w-full screen:max-w-3xl">
